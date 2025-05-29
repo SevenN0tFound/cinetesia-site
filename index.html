@@ -8,8 +8,166 @@
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --fundo: #496664;
+      --fundo-claro: #f7e2bb;
+      --texto: #5c5c5c;
+      --menu: #355c7d;
+      --hover: #8b0000;
+      --cinza: #a6a6a6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background: linear-gradient(180deg, #496664, #4e6e6b);
+      color: var(--texto);
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--menu);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--hover);
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .logo-home {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 2rem;
+      color: var(--fundo-claro);
+    }
+
+    .slogan {
+      font-size: 1.1rem;
+      color: var(--cinza);
+      margin-bottom: 2rem;
+    }
+
+    .botao-principal {
+      background-color: var(--menu);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .botao-principal:hover {
+      background-color: var(--hover);
+    }
+
+    .categorias {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 3rem 1rem;
+    }
+
+    .categoria {
+      background-color: var(--fundo-claro);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-weight: bold;
+      color: var(--menu);
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .categoria:hover {
+      transform: scale(1.05);
+      background-color: #f1d4a4;
+    }
+
+    footer {
+      background-color: var(--menu);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .footer-links {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--hover);
+    }
+
+    .footer-redes {
+      margin: 0.5rem 0 1rem;
+    }
+
+    .icone-social {
+      width: 28px;
+      height: 28px;
+      margin: 0 10px;
+      filter: invert(1);
+      transition: filter 0.3s;
+    }
+
+    .footer-redes a:hover .icone-social {
+      filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(330deg);
+    }
+
+    .footer-copy {
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .categorias {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .categoria {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
 
