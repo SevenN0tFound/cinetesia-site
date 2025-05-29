@@ -5,77 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cinetesia – Home</title>
 
-  <!-- Fontes -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --fundo: #496664;
       --fundo-claro: #f7e2bb;
-      --texto: #5c5c5c;
       --menu: #355c7d;
       --hover: #8b0000;
+      --texto: #f7e2bb;
       --cinza: #a6a6a6;
     }
 
     body {
       margin: 0;
-      font-family: 'DM Sans', sans-serif;
-      background: linear-gradient(180deg, #496664, #4e6e6b);
+      background-color: var(--fundo);
       color: var(--texto);
-      text-align: center;
+      font-family: 'DM Sans', sans-serif;
     }
 
     nav {
       background-color: var(--menu);
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
       padding: 1rem 2rem;
       position: sticky;
       top: 0;
       z-index: 10;
     }
 
-    nav a {
-      color: white;
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-logo img {
+      height: 40px;
+    }
+
+    .nav-menu a {
+      color: var(--texto);
       text-decoration: none;
+      margin-left: 2rem;
       font-weight: bold;
       transition: color 0.3s;
     }
 
-    nav a:hover {
+    .nav-menu a:hover {
       color: var(--hover);
     }
 
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
+    .banner {
+      background-image: url('imagens/banner_kiriku.webp');
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 2rem;
+      text-align: left;
+      color: white;
+      position: relative;
     }
 
-    .logo-home {
-      max-width: 180px;
+    .banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 60%);
+    }
+
+    .banner-content {
+      position: relative;
+      max-width: 600px;
+      z-index: 1;
+    }
+
+    .banner h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
-    h1 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 2rem;
-      color: var(--fundo-claro);
-    }
-
-    .slogan {
+    .banner p {
       font-size: 1.1rem;
-      color: var(--cinza);
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .botao-principal {
       background-color: var(--menu);
-      color: white;
+      border: none;
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
-      border: none;
+      font-weight: bold;
+      color: white;
       border-radius: 6px;
       text-decoration: none;
       transition: background-color 0.3s;
@@ -85,71 +106,39 @@
       background-color: var(--hover);
     }
 
-    .categorias {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 3rem 1rem;
-    }
-
-    .categoria {
-      background-color: var(--fundo-claro);
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      font-weight: bold;
-      color: var(--menu);
-      cursor: pointer;
-      transition: transform 0.2s, background-color 0.3s;
-    }
-
-    .categoria:hover {
-      transform: scale(1.05);
-      background-color: #f1d4a4;
-    }
-
     footer {
       background-color: var(--menu);
-      color: white;
-      padding: 2rem 1rem;
       text-align: center;
+      padding: 2rem 1rem 1rem;
+      color: white;
     }
 
-    .footer-redes {
-      margin: 0.5rem 0 1rem;
+    .footer-redes a {
+      margin: 0 0.5rem;
     }
 
     .icone-social {
-      width: 28px;
-      height: 28px;
-      margin: 0 10px;
+      width: 24px;
       filter: invert(1);
-      transition: filter 0.3s;
-    }
-
-    .footer-redes a:hover .icone-social {
-      filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(330deg);
     }
 
     .footer-copy {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #ddd;
+      margin-top: 1rem;
     }
 
     @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 0.5rem;
+      .banner h1 {
+        font-size: 1.8rem;
       }
 
-      .categorias {
-        flex-direction: column;
-        align-items: center;
+      .banner p {
+        font-size: 1rem;
       }
 
-      .categoria {
-        width: 80%;
+      .nav-menu a {
+        margin-left: 1rem;
       }
     }
   </style>
@@ -158,35 +147,34 @@
 
   <!-- NAVBAR -->
   <nav>
-    <a href="index.html">Início</a>
-    <a href="resenhas.html">Resenhas</a>
-    <a href="sobre.html">Sobre Nós</a>
-    <a href="sugestoes.html">Sugestões</a>
+    <div class="nav-logo">
+      <img src="imagens/Logo.png" alt="Logo do Cinetesia">
+      <strong>Cinetesia</strong>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html">Início</a>
+      <a href="resenhas.html">Resenhas</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="sugestoes.html">Sugestões</a>
+    </div>
   </nav>
 
-  <!-- CABEÇALHO -->
-  <header>
-    <img src="imagens/Logo_com_nome.png" alt="Logo do Cinetesia" class="logo-home">
-    <h1>Bem-vindo ao Cinetesia</h1>
-    <p class="slogan">Sua dose semanal de cultura pop</p>
-    <a href="resenhas.html" class="botao-principal">Ver Resenhas</a>
-  </header>
-
-  <!-- CATEGORIAS -->
-  <section class="categorias">
-    <div class="categoria">🎬 Filmes</div>
-    <div class="categoria">📺 Séries</div>
-    <div class="categoria">🎮 Jogos</div>
-    <div class="categoria">🎵 Músicas</div>
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Especial do mês: Kiriku e a Feiticeira</h1>
+      <p>Uma animação tocante que traz cultura africana e lições sobre amadurecimento, coragem e empatia.</p>
+      <a href="resenha-kiriku.html" class="botao-principal">Ver resenha completa</a>
+    </div>
   </section>
 
-  <!-- RODAPÉ SIMPLIFICADO -->
+  <!-- RODAPÉ -->
   <footer>
     <div class="footer-redes">
-      <a href="https://www.instagram.com/cinestesia_ep/?igsh=dWl1Ynk2YnFxcDFm#" target="_blank" aria-label="Instagram">
+      <a href="https://www.instagram.com/cinestesia_ep/" target="_blank" aria-label="Instagram">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="icone-social">
       </a>
-      <a href="https://www.tiktok.com/@cinestesiaa?_t=ZM-8wkckcrLPcu&_r=1" target="_blank" aria-label="TikTok">
+      <a href="https://www.tiktok.com/@cinestesiaa" target="_blank" aria-label="TikTok">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="icone-social">
       </a>
     </div>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resenhas – Cinetesia</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --fundo: #496664;
+      --fundo-claro: #f7e2bb;
+      --menu: #355c7d;
+      --hover: #8b0000;
+      --texto: #f7e2bb;
+      --cinza: #a6a6a6;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--fundo);
+      color: var(--texto);
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    nav {
+      background-color: var(--menu);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--hover);
+    }
+
+    .conteudo {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .resenha {
+      background-color: #ffffff11;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
+    }
+
+    .resenha img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .resenha h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: var(--fundo-claro);
+    }
+
+    .resenha .info {
+      font-size: 0.9rem;
+      color: var(--cinza);
+      margin-bottom: 1rem;
+    }
+
+    .resenha p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: var(--menu);
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      color: white;
+    }
+
+    .footer-redes a {
+      margin: 0 0.5rem;
+    }
+
+    .icone-social {
+      width: 24px;
+      filter: invert(1);
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: #ddd;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="resenhas.html">Resenhas</a>
+    <a href="sobre.html">Sobre Nós</a>
+    <a href="sugestoes.html">Sugestões</a>
+  </nav>
+
+  <!-- CONTEÚDO -->
+  <main class="conteudo">
+    <article class="resenha">
+      <img src="https://upload.wikimedia.org/wikipedia/pt/3/3c/Kirikou_et_la_sorciere.jpg" alt="Kiriku e a Feiticeira">
+      <h2>Kiriku e a Feiticeira</h2>
+      <div class="info">Animação • França • 1998</div>
+      <p><strong>Kiriku e a Feiticeira</strong> é uma obra incrível que mostra um pouco da cultura africana. Um grande trabalho de animação realizado por um pequeno estúdio francês com poucos recursos, mas que, mesmo assim, consegue adaptar essa história maravilhosa, cheia de nuances e lições.</p>
+      <p>A obra reflete profundamente sobre o que é crescer, o que é a maturidade e o que é "ser". Além disso, traz uma reflexão tocante sobre como as pessoas nem sempre são realmente más — às vezes, são apenas indivíduos com histórias de vida diferentes das que imaginamos. Mostra também que traumas podem ser superados, e que é possível se tornar um ser humano melhor.</p>
+      <p>O filme retrata uma lenda africana em que um recém-nascido superdotado, que já nasce sabendo falar, andar e correr muito rápido, assume a missão de salvar sua aldeia da temida Karabá — uma feiticeira terrível que eliminou todos os guerreiros, secou a fonte de água e roubou o ouro das mulheres.</p>
+      <p>Kiriku é tratado de forma ambígua pelos habitantes da aldeia: por ser um bebê, é muitas vezes desprezado pelos mais velhos quando tenta ajudar, mas tem suas ações heroicas comemoradas com entusiasmo — embora o desprezo retorne logo depois. Apenas sua mãe o trata com respeito e reconhece sua inteligência.</p>
+      <p>Além disso, existem duas sequências do filme original de 1998, lançadas em 2005 e 2012, respectivamente, chamadas <em>Kiriku e os Animais Selvagens</em> e <em>Kiriku: Os Homens e as Mulheres</em>. Essas continuações trazem novos contos que se passam durante a infância de Kiriku, situando-se em momentos diversos dentro da narrativa do primeiro filme, e aprofundam ainda mais o universo do pequeno herói africano.</p>
+    </article>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="footer-redes">
+      <a href="https://www.instagram.com/cinestesia_ep/" target="_blank" aria-label="Instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="icone-social">
+      </a>
+      <a href="https://www.tiktok.com/@cinestesiaa" target="_blank" aria-label="TikTok">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="icone-social">
+      </a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Cinetesia. Todos os direitos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
