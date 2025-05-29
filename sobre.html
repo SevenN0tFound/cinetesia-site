@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós – Cinetesia</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .equipe {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .departamento {
+      background-color: var(--fundo-claro);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .departamento img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: var(--cinza);
+    }
+
+    .departamento-info h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: var(--menu);
+    }
+
+    .departamento-info p {
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      color: var(--texto);
+    }
+
+    .mvv {
+      max-width: 800px;
+      margin: 3rem auto 2rem;
+      padding: 0 1rem;
+    }
+
+    .mvv h3 {
+      font-family: 'Libre Baskerville', serif;
+      color: var(--fundo-claro);
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .mvv-item {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .mvv-item h4 {
+      margin: 0 0 0.5rem;
+      color: var(--menu);
+      font-size: 1.2rem;
+    }
+
+    .mvv-item p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .departamento {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .departamento img {
+        margin-bottom: 1rem;
+      }
+
+      .departamento-info h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="resenhas.html">Resenhas</a>
+    <a href="sobre.html">Sobre Nós</a>
+    <a href="sugestoes.html">Sugestões</a>
+  </nav>
+
+  <header>
+    <img src="imagens/Logo_com_nome.png" alt="Logo do Cinetesia" class="logo-home">
+    <h1>Sobre o Cinetesia</h1>
+    <p class="slogan">Conheça quem faz esse projeto acontecer</p>
+  </header>
+
+  <section class="equipe">
+    <div class="departamento">
+      <img src="https://via.placeholder.com/80" alt="Foto da equipe">
+      <div class="departamento-info">
+        <h2>Desenvolvimento</h2>
+        <p>Cria e cuida do site, garantindo que tudo funcione bem em todos os dispositivos.</p>
+      </div>
+    </div>
+
+    <div class="departamento">
+      <img src="https://via.placeholder.com/80" alt="Foto da equipe">
+      <div class="departamento-info">
+        <h2>Pesquisa</h2>
+        <p>Responsável por reunir informações e referências para deixar as resenhas completas e confiáveis.</p>
+      </div>
+    </div>
+
+    <div class="departamento">
+      <img src="https://via.placeholder.com/80" alt="Foto da equipe">
+      <div class="departamento-info">
+        <h2>Social</h2>
+        <p>Cuida das redes sociais, divulga conteúdo e mantém a conexão com o público.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mvv">
+    <h3>Missão, Visão e Valores</h3>
+
+    <div class="mvv-item">
+      <h4>Missão</h4>
+      <p>Compartilhar resenhas acessíveis e criativas sobre cultura pop, estimulando o senso crítico e o amor por arte.</p>
+    </div>
+
+    <div class="mvv-item">
+      <h4>Visão</h4>
+      <p>Nos tornarmos referência jovem em conteúdo de entretenimento e crítica cultural no Brasil.</p>
+    </div>
+
+    <div class="mvv-item">
+      <h4>Valores</h4>
+      <p>Trabalhamos com colaboração, criatividade, respeito à diversidade, linguagem acessível e responsabilidade.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-copy">
+      &copy; 2025 Cinetesia. Todos os direitos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
